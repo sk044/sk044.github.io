@@ -586,19 +586,18 @@
           </div>
         </div>
 		<div class="col-12 order-md-last d-flex mt-4">			
-			<!-- action="" -->
-            <form method="POST"  class="bg-light p-4 p-md-5 contact-form">
+            <form  class="bg-light p-4 p-md-5 contact-form" id="contactme">
               <div class="form-group">
                 <input type="email" name="emailAddress" class="form-control" placeholder="Your Email" required>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="entry.1779609672" placeholder="Topic">
+                <input type="text" class="form-control" name="topic" placeholder="Topic">
               </div>			  
               <div class="form-group">
-                <textarea name="entry.1000505261" type="text" cols="30" rows="5" class="form-control" placeholder="Message" required ></textarea>
+                <textarea name="message" type="text" cols="30" rows="5" class="form-control" placeholder="Message" required ></textarea>
               </div>
               <div class="form-group float-right">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Message" id="submit-form" class="btn btn-primary py-3 px-5">
               </div>
             </form>
          </div>
@@ -650,7 +649,6 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
     
   </body>
