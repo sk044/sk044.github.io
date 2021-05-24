@@ -508,7 +508,7 @@ $(function() {
 })(jQuery);
 
 var $form = $('form#contactme'),
-    url = 'https://script.google.com/macros/s/AKfycbyfkPwPFY5dP6nROzn6WPWA2in0gl8JJOZE5vdfShPwmUNShmHOT-I7DoJWnq-qTkjf/exec'
+    url = 'https://api.apispreadsheets.com/data/12886/'
 
 	
 
@@ -516,11 +516,11 @@ var $form = $('form#contactme'),
 	e.preventDefault();
 	var jqxhr = $.ajax({
 		url: url,
-		method: "GET",
+		method: "POST",
 		dataType: "json",
-		data: $('#contactme').serializeObject()
+		data: $('#contactme').serializeArray()
 	}).success(
-		// alert("Your Message has been sent !!")
-		console.log($('#contactme').serializeObject()),alert("Response Submitted")
+		console.log($('#contactme').serializeArray()),
+		alert("Your Message has been sent !! Will contact you soon :)")
 	);
 	})
