@@ -25,6 +25,7 @@ const overlay = document.querySelector("[data-overlay]");
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
+const modalInfo = document.querySelector("[data-modal-info]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
@@ -41,6 +42,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalInfo.innerHTML = this.querySelector("[testimonials-item-u-info]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
@@ -156,4 +158,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+function openInNewTab(event) {
+  event.preventDefault();
+  var url = event.target.href;
+  window.open(url, "_blank");
 }
